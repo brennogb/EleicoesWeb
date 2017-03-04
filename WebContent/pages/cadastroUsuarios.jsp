@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Cadastro de Usuários do Sistema</title>
+	</head>
+	
+	<body>
+		<jsp:include page="cabecalho.jsp" flush="true"/>
+	
+		<h2 class="text-center">Informe seus dados</h2>
+
+		<form method="post">
+			<div>
+				<div class="form-group .col-lg-4">
+					<label for="nome">Nome</label> 
+					<input type="text" class="form-control" id="nome" placeholder="Nome">
+				</div>
+			
+				<div class="form-group .col-lg-4">
+					<label for="email">E-mail</label> 
+					<input type="text" class="form-control" id="email" placeholder="E-mail">
+				</div>
+			
+				<div class="form-group .col-lg-4">
+					<label for="senha">Senha</label> 
+					<input type="password" class="form-control" id="senha" placeholder="Senha">
+			</div>
+			
+			<button type="submit" class="btn btn-default">Salvar</button>
+			</div>
+		</form>
+
+	<jsp:include page="rodape.jsp" flush="true"/>
+		
+	</body>
+</html>
