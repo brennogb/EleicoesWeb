@@ -16,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.jsp">Sistema de Gerenciamento de Eleições</a>
+          <a class="navbar-brand" href="/EleicoesWeb/index.jsp">Sistema de Gerenciamento de Eleições</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -26,7 +26,7 @@
             <div class="form-group">
               <input type="password" placeholder="Senha" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Entrar</button>
+            <input type="submit" class="btn btn-success" value="Entrar" />
             <a class="btn btn-primary" href="pages/cadastroUsuarios.jsp">Cadastrar</a>
           </form>
         </div><!--/.navbar-collapse -->

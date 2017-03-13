@@ -11,7 +11,7 @@
 	
 		<h2 class="text-center">Informe seus dados</h2>
 
-		<form method="post">
+		<form method="post" action="CadastroUsuario">
 			<div>
 				<div class="form-group .col-lg-4">
 					<label for="nome">Nome</label> 
@@ -28,7 +28,7 @@
 					<input type="password" class="form-control" id="senha" placeholder="Senha">
 			</div>
 			
-			<button type="submit" class="btn btn-default">Salvar</button>
+			<input type="submit" class="btn btn-default" value="Salvar" />
 			</div>
 		</form>
 

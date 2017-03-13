@@ -2,7 +2,7 @@ package br.estacio.eleicoesweb.dao;
 
 import java.util.List;
 
-public interface AbstractDAO<T> {
+public interface CAbstractDAO<T> {
 	
 	public void inserir(T entidade);
 	
