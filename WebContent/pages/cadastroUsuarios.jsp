@@ -11,21 +11,21 @@
 	
 		<h2 class="text-center">Informe seus dados</h2>
 
-		<form method="post" action="CadastroUsuario">
+		<form method="post" action="../Cadastrar">
 			<div>
 				<div class="form-group .col-lg-4">
 					<label for="nome">Nome</label> 
-					<input type="text" class="form-control" id="nome" placeholder="Nome">
+					<input type="text" class="form-control" name="nome" placeholder="Nome">
 				</div>
 			
 				<div class="form-group .col-lg-4">
 					<label for="email">E-mail</label> 
-					<input type="text" class="form-control" id="email" placeholder="E-mail">
+					<input type="text" class="form-control" name="email" placeholder="E-mail">
 				</div>
 			
 				<div class="form-group .col-lg-4">
 					<label for="senha">Senha</label> 
-					<input type="password" class="form-control" id="senha" placeholder="Senha">
+					<input type="password" class="form-control" name="senha" placeholder="Senha">
 			</div>
 			
 			<input type="submit" class="btn btn-default" value="Salvar" />

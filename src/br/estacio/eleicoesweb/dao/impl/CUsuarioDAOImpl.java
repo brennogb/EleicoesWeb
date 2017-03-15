@@ -19,8 +19,8 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 			Connection connection = CConnectionFactory.getConnection();
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, entidade.getCnome());
-			ps.setString(1, entidade.getCemail());
-			ps.setString(1, entidade.getCsenha());
+			ps.setString(2, entidade.getCemail());
+			ps.setString(3, entidade.getCsenha());
 			ps.execute();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);

@@ -14,7 +14,7 @@ import br.estacio.eleicoesweb.entidades.CUsuario;
 /**
  * Servlet implementation class CadastroUsuario
  */
-@WebServlet("/CadastroUsuario")
+@WebServlet(urlPatterns = {"/Cadastrar"})
 public class CadastroUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CUsuario cUsuario = new CUsuario();
@@ -27,11 +27,6 @@ public class CadastroUsuario extends HttpServlet {
         super();
     }
 
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,8 +41,8 @@ public class CadastroUsuario extends HttpServlet {
 		cUsuario.setCnome(request.getParameter("nome"));
 		cUsuario.setCemail(request.getParameter("email"));
 		cUsuario.setCsenha(request.getParameter("senha"));
-		cUsuarioDAO.inserir(cUsuario);
-		response.sendRedirect("usuarioSucesso");
+		//cUsuarioDAO.inserir(cUsuario);
+		response.sendRedirect("pages/usuarioSucesso.jsp");
 	}
 
 }
