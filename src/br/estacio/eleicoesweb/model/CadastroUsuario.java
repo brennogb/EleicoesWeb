@@ -41,7 +41,7 @@ public class CadastroUsuario extends HttpServlet {
 		cUsuario.setCnome(request.getParameter("nome"));
 		cUsuario.setCemail(request.getParameter("email"));
 		cUsuario.setCsenha(request.getParameter("senha"));
-		//cUsuarioDAO.inserir(cUsuario);
+		cUsuarioDAO.inserir(cUsuario);
 		response.sendRedirect("pages/usuarioSucesso.jsp");
 	}
 

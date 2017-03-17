@@ -17,7 +17,7 @@
       		<div class="container">
         		<h1>Seja Bem-vindo!</h1>
         		<p>Aqui você poderá acompanhar todas as informações sobre as eleições e inclusive votar!</p>
-        		<button type="button" class="btn btn-primary btn-lg">Votar</button>
+        		<a class="btn btn-primary btn-lg" href="pages/votar.jsp">Votar</a>
       		</div>
     	</div>
 	 </section>

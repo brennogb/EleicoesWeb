@@ -13,7 +13,7 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 
 	@Override
 	public void inserir(CUsuario entidade) {
-		String sql = "INSERT INTO USUARIOS VALUES(?,?,?)";
+		String sql = "INSERT INTO USUARIOS(nome, email, senha) VALUES(?,?,?)";
 		
 		try {
 			Connection connection = CConnectionFactory.getConnection();

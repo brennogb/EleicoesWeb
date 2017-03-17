@@ -19,7 +19,7 @@
           <a class="navbar-brand" href="/EleicoesWeb/index.jsp">Sistema de Gerenciamento de Eleições</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right" action="../Logar">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
