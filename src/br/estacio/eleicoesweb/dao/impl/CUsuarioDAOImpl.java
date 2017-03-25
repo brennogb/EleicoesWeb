@@ -14,16 +14,21 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 	@Override
 	public void inserir(CUsuario entidade) {
 		String sql = "INSERT INTO USUARIOS(nome, email, senha) VALUES(?,?,?)";
-		
+		Connection connection = CConnectionFactory.getConnection();
 		try {
-			Connection connection = CConnectionFactory.getConnection();
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, entidade.getCnome());
 			ps.setString(2, entidade.getCemail());
 			ps.setString(3, entidade.getCsenha());
-			ps.execute();
+			ps.executeUpdate();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	}
 

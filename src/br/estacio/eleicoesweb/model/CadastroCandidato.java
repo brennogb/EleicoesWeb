@@ -1,8 +1,6 @@
 package br.estacio.eleicoesweb.model;
 
 import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,16 +12,16 @@ import br.estacio.eleicoesweb.dao.impl.CandidatoDAOImpl;
 import br.estacio.eleicoesweb.entidades.Candidato;
 
 /**
- * Servlet implementation class VotoService
+ * Servlet implementation class CadastroCandidato
  */
-@WebServlet("/Votar")
-public class VotoService extends HttpServlet {
+@WebServlet("/CadastrarCandidato")
+public class CadastroCandidato extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public VotoService() {
+    public CadastroCandidato() {
         super();
     }
 
@@ -31,18 +29,20 @@ public class VotoService extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String numeroVoto = request.getParameter("numeroVoto");
 		CandidatoDAO candidatoDAO = new CandidatoDAOImpl();
-		Candidato candidato = candidatoDAO.obterPorNumeroCandidato(numeroVoto);
-		request.setAttribute("nomeCandidato", candidato.getNome());
-		RequestDispatcher rd = getServletContext().getRequestDispatcher("/confirmacaoVoto.jsp");
-		rd.forward(request, response);
+		Candidato candidato = new Candidato();
+		candidato.setNome(request.getParameter("nome"));
+		candidato.setNumero(request.getParameter("numero"));
+		
+		candidatoDAO.inserir(candidato);
+		response.sendRedirect("candidatoSucesso.jsp");
 	}
 
 }

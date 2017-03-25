@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 
 <head>
-	<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../resources/css/jumbotron.css" rel="stylesheet">
+	<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/jumbotron.css" rel="stylesheet">
 </head>
 
 <header>
@@ -27,7 +27,7 @@
               <input type="password" placeholder="Senha" class="form-control">
             </div>
             <input type="submit" class="btn btn-success" value="Entrar" />
-            <a class="btn btn-primary" href="pages/cadastroUsuarios.jsp">Cadastrar</a>
+            <a class="btn btn-primary" href="cadastroUsuarios.jsp">Cadastrar</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -35,5 +35,5 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
 </header>

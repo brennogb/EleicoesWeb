@@ -42,7 +42,7 @@ public class CadastroUsuario extends HttpServlet {
 		cUsuario.setCemail(request.getParameter("email"));
 		cUsuario.setCsenha(request.getParameter("senha"));
 		cUsuarioDAO.inserir(cUsuario);
-		response.sendRedirect("pages/usuarioSucesso.jsp");
+		response.sendRedirect("usuarioSucesso.jsp");
 	}
 
 }
