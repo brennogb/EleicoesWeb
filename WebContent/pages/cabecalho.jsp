@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
 <head>
 	<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="../resources/css/jumbotron.css" rel="stylesheet">

@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 	<head>
+		<meta charset="utf-8">
 		<title>Cadastro de Usuários do Sistema</title>
 	</head>
-	
 	<body>
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 	
@@ -14,8 +14,8 @@
 		<form method="post" action="../Cadastrar">
 			<div>
 				<div class="form-group .col-lg-4">
-					<label for="nome">Nome</label> 
-					<input type="text" class="form-control" name="nome" placeholder="Nome">
+					<label for="user-nome">Nome</label> 
+					<input type="text" id="user-name" class="form-control" name="nome" placeholder="Nome">
 				</div>
 			
 				<div class="form-group .col-lg-4">
