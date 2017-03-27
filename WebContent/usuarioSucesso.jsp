@@ -4,6 +4,9 @@
 <html>
 	<head>
 		<title>Cadastro de Usuários do Sistema</title>
+		<link rel="icon" href="../../favicon.ico">
+    	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="resources/css/jumbotron.css" rel="stylesheet">
 	</head>
 	
 	<body>

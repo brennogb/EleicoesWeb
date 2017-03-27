@@ -5,13 +5,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cadastro de Usuários do Sistema</title>
+		<link rel="icon" href="../../favicon.ico">
+    	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="resources/css/jumbotron.css" rel="stylesheet">
 	</head>
 	<body>
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 	
 		<h2 class="text-center">Informe seus dados</h2>
 
-		<form method="post" action="../Cadastrar">
+		<form method="post" action="Cadastrar">
 			<div>
 				<div class="form-group .col-lg-4">
 					<label for="user-nome">Nome</label> 
