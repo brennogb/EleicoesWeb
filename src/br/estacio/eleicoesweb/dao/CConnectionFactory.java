@@ -8,7 +8,7 @@ public final class CConnectionFactory {
 	
 	private static final String SERVIDOR = "jdbc:mysql://localhost:3306/eleicoes";
 	private static final String USUARIO = "root";
-	private static final String SENHA = "121008";
+	private static final String SENHA = "qwe123";
 	
 	private static Connection connection;
 	
