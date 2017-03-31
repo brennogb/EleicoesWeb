@@ -2,13 +2,28 @@
     pageEncoding="UTF-8"%>
 
 <header>
-	<nav class="navbar navbar-inverse bg-inverse" style="display: block;">
-		<a href="/EleicoesWeb/index.jsp" class="navbar-brand" style="width:65px">
-			<img src="resources/images/sige.svg" alt="Sistema de Gerenciamento de Eleições" style="width:65px">
-		</a>
-		<button type="button" class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#logarModal">
-  			Logar
-		</button>
+
+	<nav class="navbar navbar-inverse bg-inverse">		
+		<div class="container">
+			<ul class="nav nav-justified">
+	  			<li class="nav-item">
+					<a href="/EleicoesWeb/index.jsp" class="navbar-brand">
+						<img src="resources/img/SIGE-logo-small.png" class="img-fluid" alt="Sistema de Gerenciamento de Eleições">
+					</a>
+	  			</li>
+	  			<li class="nav-item">
+	  				<a class="nav-link" href="votar.jsp">Votar</a>
+	  			</li>
+	  			<li class="nav-item">
+	        		<a class="nav-link" href="cadastroCandidato.jsp">Cadastrar candidato</a>
+	  			</li>
+	  			<li class="nav-item">
+					<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#logarModal">
+			  			Logar
+					</button>
+				</li>
+	  		</ul>
+  		</div>
     </nav>
 </header>
 
