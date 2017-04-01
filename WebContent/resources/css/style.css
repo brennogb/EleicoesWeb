@@ -1,3 +1,16 @@
 .navbar-brand {
 	width:89px;
 }
+
+.btn {
+	cursor: pointer;
+}
+
+.numpad {
+	width: 300px;
+	/*margin: auto;*/
+}
+
+.numpad .row {
+	margin-top: 15px;
+}
