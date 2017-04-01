@@ -36,47 +36,69 @@
 	
 	<body>
 		<jsp:include page="cabecalho.jsp" flush="true"/>
-		<h1 class="text-center">Votação</h1>
-		<hr/>
 
-		<div class="container">
+		<div class="container mt-3">
+			<h1 class="text-center">Votação</h1>
+			<hr/>
 			<div class="row">
 				<div class="col-md-4">
 					<form method="post" action="Votar">
 						<div class="form-group">
 							
 							<label for="nome">Número</label>
-							<input type="text" class="form-control" name="numeroVoto" placeholder="0000">
-							<span>Informe o número do seu candidato</span>
+							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="0000">
+							<small>Informe o número do seu candidato</small>
 						</div>
 					</form>
 				</div>
 				<div class="col-md-8">
+				</div>
+			</div>
+			<div class="row">
+				<div class="numpad col-md-4">
 					<div class="row">
 						<div class="col">
-							<button class="btn-lg">1</button>
-							<button class="btn-lg">2</button>
-							<button class="btn-lg">3</button>
+							<button class="btn btn-primary btn-lg btn-block">1</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">2</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">3</button>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
-							<button class="btn-lg">4</button>
-							<button class="btn-lg">5</button>
-							<button class="btn-lg">6</button>
+							<button class="btn btn-primary btn-lg btn-block">4</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">5</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">6</button>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
-							<button class="btn-lg">7</button>
-							<button class="btn-lg">8</button>
-							<button class="btn-lg">9</button>
+							<button class="btn btn-primary btn-lg btn-block">7</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">8</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">9</button>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
-							<button class="btn-lg" style="visibility:hidden;" tabindex="-1">#</button>
-							<button class="btn-lg">0</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">0</button>
+						</div>
+						<div class="col">
+							<button class="btn btn-primary btn-lg btn-block">
+								<img src="resources/img/backspace-arrow_icon.png">
+							</button>
 						</div>
 					</div>
 				</div>
