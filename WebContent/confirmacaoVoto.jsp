@@ -1,7 +1,10 @@
+<%@page import="br.estacio.eleicoesweb.entidades.Candidato"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
+
+	<% Candidato c = (Candidato) request.getAttribute("candidato"); %>
 
 	<head>
     	<meta charset="utf-8"/>
@@ -45,7 +48,8 @@
 					<div class="row">
 						<div class="col-md-4">
 							<label for="nome">Nome: </label> 
-							<%= request.getAttribute("nomeCandidato") %>
+							<%= c.getNome() %>
+							<input type="hidden" value="<%= c.getNumero() %>" name="NumVoto"/>
 						</div>
 					</div>
 					

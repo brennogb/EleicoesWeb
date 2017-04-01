@@ -40,7 +40,7 @@ public class VotoService extends HttpServlet {
 		String numeroVoto = request.getParameter("numeroVoto");
 		CandidatoDAO candidatoDAO = new CandidatoDAOImpl();
 		Candidato candidato = candidatoDAO.obterPorNumeroCandidato(numeroVoto);
-		request.setAttribute("nomeCandidato", candidato.getNome());
+		request.setAttribute("candidato", candidato);
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/confirmacaoVoto.jsp");
 		rd.forward(request, response);
 	}
