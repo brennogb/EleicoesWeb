@@ -39,8 +39,10 @@
   	
 	 <section>
     	<div class="container">
+	 		<img src="resources/img/SIGE-logo-art.png" alt="Logo SIGE em formato artistico com letras cizas e fundo branco">
+	 		<h1 class="display-3 text-center" style="color: #b3b3b3;">Sistema de Gerenciamento de Eleições</h1>
 	 		<div class="jumbotron mt-3">
-	 			<h1 class="display-3">Seja Bem-vindo!</h1>
+	 			<h2 class="">Seja Bem-vindo!</h2>
 	       		<p class="lead">Aqui você poderá acompanhar todas as informações sobre as eleições e inclusive votar!</p>
 	       		<hr class="my-4">
 	       		<a class="btn btn-outline-primary btn-lg" href="votar.jsp">Votar</a>
