@@ -2,15 +2,46 @@
 	width:89px;
 }
 
+.navbar a {
+	position: relative;
+	color: #fff;
+}
+
+.navbar .nav-link:after {
+	content: "";
+	height: 2px;
+	width: 0;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transition: all .3s ease-out;
+}
+
+.navbar .nav-link:hover::after {
+	width: 100%;
+	left: 0;
+}
+
 .btn {
 	cursor: pointer;
 }
 
 .numpad {
-	width: 300px;
+	/*width: 300px;*/
 	/*margin: auto;*/
 }
 
 .numpad .row {
 	margin-top: 15px;
+}
+
+.candidato-card {
+	text-align: center;
+}
+
+.candidato-card img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 20px;
 }
