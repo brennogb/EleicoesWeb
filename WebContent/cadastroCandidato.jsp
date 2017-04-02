@@ -47,12 +47,11 @@
 						<div class="col">
 							<form>
 								<div class="card">
-									<img class="card-img-top" src="" alt="Foto do candidato">
-									<div class="card-block">
-										<h4 class="card-title">
-											<span class="nome-candidato">Nome do Candidato</span> <span class="candidato-num">10</span>
-										</h4>
-										<button class="btn btn-primary">Salvar imagem</button>
+									<div class="candidato-card mt-4">
+										<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
+									</div>
+									<div class="card-block text-center">
+										<button class="btn btn-primary">Upload de imagem</button>
 									</div>
 								</div>
 							</form>
@@ -64,17 +63,19 @@
 						<div class="row">
 							<div class="col">
 								<label for="nome">Nome do candidato</label> 
-								<input type="text" class="form-control" name="nome" placeholder="José da Silva">
+								<input type="text" class="form-control" name="nome" placeholder="José da Silva" autofocus>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
 								<label for="email">Número</label> 
-								<input type="number" class="form-control" name="numero" placeholder="00">
+								<input type="number" class="form-control" name="numero" placeholder="00000" min="0" max="99999" pattern="[0-9]*" inputmode="numeric">
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
+								<input type="file" name="image-candidato" class="" style="display: none;">
+								
 								<input type="submit" class="btn btn-primary btn-block" value="Salvar" style="margin-top:20px"/>
 							</div>
 						</div>
