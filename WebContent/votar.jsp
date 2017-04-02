@@ -44,62 +44,67 @@
 				<div class="col-md-4">
 					<form method="post" action="Votar">
 						<div class="form-group">
-							
 							<label for="nome">Número</label>
-							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="0000">
+							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00000"
+								max="99999" min="0">
 							<small>Informe o número do seu candidato</small>
+						</div>
+					
+						<div class="numpad">
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">1</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">2</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">3</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">4</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">5</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">6</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">7</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">8</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">9</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<input type="submit" value="Votar" class="btn btn-success btn-lg btn-block"/>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block">0</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block" aria-label="backspace" data-toggle="tooltip" title="backspace (apaga para trás)">
+										<img src="resources/img/backspace-arrow_icon.png" alt="">
+									</button>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
+				
 				<div class="col-md-8">
-				</div>
-			</div>
-			<div class="row">
-				<div class="numpad col-md-4">
-					<div class="row">
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">1</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">2</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">3</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">4</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">5</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">6</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">7</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">8</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">9</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">0</button>
-						</div>
-						<div class="col">
-							<button class="btn btn-primary btn-lg btn-block">
-								<img src="resources/img/backspace-arrow_icon.png">
-							</button>
-						</div>
+					<div class="candidato-card">
+						<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
+						<h4>Nome do candidato</h4>
 					</div>
 				</div>
 			</div>
