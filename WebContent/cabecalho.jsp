@@ -40,7 +40,7 @@
 	      <div class="modal-body">
 		    <input type="text" placeholder="Email" class="form-control mt-2">
 		    <input type="password" placeholder="Senha" class="form-control mt-2 mb-2">
-		    Não possui conta? <a href="cadastroUsuarios.jsp">Cadastrar</a>
+		    Não possui conta? <a href="cadastroUsuarios.jsp">Cadastra-se!</a>
 	      </div>
 	      <div class="modal-footer">
 			<input type="submit" class="btn btn-success my-2 my-sm-0" value="Entrar" />
