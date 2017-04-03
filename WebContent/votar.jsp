@@ -40,10 +40,20 @@
 		<div class="container mt-3">
 			<h1 class="text-center">Votação</h1>
 			<hr/>
-			<div class="row">
-				<div class="col-md-4">
+			
+			<div class="row mt-5 justify-content-center">
+				<div class="col-lg-6  card pt-3 pb-3">
+					<div class="row">
+						<div class="col">
+							<div class="card bg-gray">
+								<div class="candidato-card mt-4">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
+								</div>
+							</div>
+						</div>
+					</div>
 					<form method="post" action="/Votar">
-						<div class="form-group">
+						<div class="form-group mt-2 mb-2">
 							<label for="nome">Número</label>
 							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00000"
 								max="99999" min="0">
@@ -99,14 +109,7 @@
 							</div>
 						</div>
 					</form>
-				</div>
 				
-				<div class="col-md-8">
-					<div class="candidato-card">
-						<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
-						<h4>Nome do candidato</h4>
-					</div>
-				</div>
 			</div>
 		</div>
 

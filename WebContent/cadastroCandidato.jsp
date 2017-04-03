@@ -74,7 +74,7 @@
 							<div class="col">
 								<input type="file" name="image-candidato" class="" style="display: none;">
 								
-								<input type="submit" class="btn btn-primary btn-block" value="Salvar" style="margin-top:20px"/>
+								<input type="submit" class="btn btn-primary btn-block mt-2" value="Salvar"/>
 							</div>
 						</div>
 					</form>
