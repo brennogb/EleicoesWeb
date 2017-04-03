@@ -42,7 +42,7 @@
 			<hr/>
 			<div class="row">
 				<div class="col-md-4">
-					<form method="post" action="Votar">
+					<form method="post" action="/Votar">
 						<div class="form-group">
 							<label for="nome">Número</label>
 							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00000"

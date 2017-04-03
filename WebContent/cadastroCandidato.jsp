@@ -41,12 +41,12 @@
 			<h1 class="text-center">Cadastrar Candidato</h1>
 			<hr/>
 			<h2>Informe os dados do candidato</h2>
-			<div class="row mt-5">
-				<div class="col-lg-6">
+			<div class="row mt-5 justify-content-center">
+				<div class="col-lg-6  card pt-3 pb-3">
 					<div class="row">
 						<div class="col">
 							<form>
-								<div class="card">
+								<div class="card bg-gray">
 									<div class="candidato-card mt-4">
 										<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
 									</div>
@@ -57,8 +57,6 @@
 							</form>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-6">
 					<form method="post" action="CadastrarCandidato">
 						<div class="row">
 							<div class="col">

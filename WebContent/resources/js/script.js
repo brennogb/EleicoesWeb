@@ -1,16 +1,18 @@
-var Numpad = function () {
-	this.MAX_LENGTH = 5;
-};
+var Numpad = function () {};
 
-Numpad.prototype.putNumber = function () {
-		const MAX_LENGTH = 5;
-		var num = $(this).text();
-		var inputVoto = $('#numero-voto');
-		var numVoto = inputVoto.val();
-		
-		if (numVoto.length < MAX_LENGTH) {
-			inputVoto.val(numVoto + num);
-		}
+Numpad.prototype.putNumber = function (event) {
+	event.preventDefault();
+	console.log(event);
+	console.log(this);
+	var btn = $(event.target);
+	var num = btn.text();
+	var inputVoto = $('#numero-voto');
+	var numVoto = inputVoto.val();
+	var MAX_LENGTH = 5;
+	
+	if (numVoto.length < MAX_LENGTH) {
+		inputVoto.val(numVoto + num);
+	}
 };
 
 var Eleicao = function () {
@@ -49,9 +51,14 @@ Eleicao.prototype.verificarNumeroDoCandidato = function (evt) {
 };
 
 $(document).ready(function() {
+	var numpad = new Numpad(),
+		eleicao = new Eleicao();
+	
 	 $('[data-toggle="tooltip"]').tooltip();
 	
-	$('.numpad').find('.btn').on('click', Numpad.putNumber);
+	$('.numpad').find('.btn-primary').on('click', numpad.putNumber);
 	
-	$('#numero-voto').on('keyup', Eleicao.verificarNumeroDoCandidato);
+	$('#numero-voto').on('keyup', eleicao.verificarNumeroDoCandidato);
+	
+	$()
 });
