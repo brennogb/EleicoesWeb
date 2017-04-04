@@ -9,7 +9,7 @@
     	<meta name="author" content="Brenno Gomes e Riva Junior">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	
-		<title>Cadastro de Candidatos do Sistema</title>
+		<title>Cadastro de Usuários do Sistema</title>
 		
 		<!-- Favcons para navegadores desktop -->
 		<link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
@@ -38,9 +38,9 @@
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 
 		<div class="container mt-3">
-			<h1 class="text-center">Cadastrar Candidato</h1>
+			<h1 class="text-center">Cadastrar Usuário</h1>
 			<hr/>
-			<h2>Informe os dados do candidato</h2>
+			<h2>Informe os dados do usuário</h2>
 			<div class="row mt-5 justify-content-center">
 				<div class="col-lg-6  card pt-3 pb-3">
 					<div class="row">
@@ -57,17 +57,23 @@
 							</form>
 						</div>
 					</div>
-					<form method="post" action="CadastrarCandidato">
+					<form method="post" action="Cadastrar">
 						<div class="row">
 							<div class="col">
-								<label for="nome">Nome do candidato</label> 
+								<label for="nome">Nome</label> 
 								<input type="text" class="form-control" name="nome" placeholder="José da Silva" autofocus>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
-								<label for="email">Número</label> 
-								<input type="number" class="form-control" name="numero" placeholder="00000" min="0" max="99999" pattern="[0-9]*" inputmode="numeric">
+								<label for="email">E-mail</label> 
+								<input type="text" class="form-control" name="email" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="senha">Senha</label> 
+								<input type="password" class="form-control" name="senha" placeholder="Senha">
 							</div>
 						</div>
 						<div class="row">

@@ -14,7 +14,7 @@ import br.estacio.eleicoesweb.entidades.CUsuario;
 /**
  * Servlet implementation class CadastroUsuario
  */
-@WebServlet(urlPatterns = {"/Cadastrar"})
+@WebServlet("/Cadastrar")
 public class CadastroUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CUsuario cUsuario = new CUsuario();
