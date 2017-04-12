@@ -59,10 +59,9 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 	
 	public CUsuario obterPorLoginESenha(String login, String senha) {
 		String sql = "SELECT * FROM USUARIOS WHERE email = ? AND senha = ?";
-
-		try (Connection connection = CConnectionFactory.getConnection();
-				PreparedStatement ps = connection.prepareStatement(sql);) {
-
+		Connection connection = CConnectionFactory.getConnection();
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, login);
 			ps.setString(2, senha);
 
@@ -78,6 +77,12 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 			return usuario;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
-		} 
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	}
 }
