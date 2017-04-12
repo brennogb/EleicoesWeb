@@ -52,7 +52,7 @@
 							</div>
 						</div>
 					</div>
-					<form method="post" action="/Votar">
+					<form method="post" action="Votar">
 						<div class="form-group mt-2 mb-2">
 							<label for="nome">Número</label>
 							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00000"

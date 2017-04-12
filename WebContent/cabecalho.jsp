@@ -17,29 +17,41 @@
 	  			<li class="nav-item">
 	        		<a class="nav-link" href="cadastroCandidato.jsp">Cadastrar candidato</a>
 	  			</li>
+	  			<% if(request.getSession().getAttribute("usuarioLogado") != null) { %>
+					<li class="nav-item">
+						<form method="post" action="Logout">
+							<button type="submit" class="btn btn-outline-primary">
+			  					Logout
+							</button>
+						</form>
+					</li>
+				<% } else { %>
 	  			<li class="nav-item">
 					<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#logarModal">
 			  			Logar
 					</button>
 				</li>
+				<% } %>
 	  		</ul>
   		</div>
     </nav>
 </header>
 
-<div class="modal fade" id="logarModal" tabindex="-1" role="dialog" aria-labelledby="logarModalLabel" aria-hidden="true">
+	<div class="modal fade" id="logarModal" tabindex="-1" role="dialog" aria-labelledby="logarModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      
         <h5 class="modal-title" id="logarModalLabel">Logar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <form class="" action="Logar">
+      
+        <form class="" method="post" action="Logar">
 	      <div class="modal-body">
-		    <input type="text" placeholder="Email" class="form-control mt-2">
-		    <input type="password" placeholder="Senha" class="form-control mt-2 mb-2">
+		    <input type="text" name="email" placeholder="Email" class="form-control mt-2">
+		    <input type="password" name="senha" placeholder="Senha" class="form-control mt-2 mb-2">
 		    Não possui conta? <a href="cadastroUsuarios.jsp">Cadastra-se!</a>
 	      </div>
 	      <div class="modal-footer">
@@ -50,3 +62,6 @@
     </div>
   </div>
 </div>
+
+
+

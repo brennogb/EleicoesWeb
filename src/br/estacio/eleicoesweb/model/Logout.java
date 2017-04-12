@@ -7,22 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.estacio.eleicoesweb.dao.CandidatoDAO;
-import br.estacio.eleicoesweb.dao.impl.CandidatoDAOImpl;
-import br.estacio.eleicoesweb.entidades.Candidato;
-
 /**
- * Servlet implementation class CadastroCandidato
+ * Servlet implementation class Logout
  */
-@WebServlet("/CadastrarCandidato")
-public class CadastroCandidato extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CadastroCandidato() {
+    public Logout() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -36,18 +33,8 @@ public class CadastroCandidato extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CandidatoDAO candidatoDAO = new CandidatoDAOImpl();
-		Candidato candidato = new Candidato();
-		candidato.setNome(request.getParameter("nome"));
-		candidato.setNumero(request.getParameter("numero"));
-		
-		try {
-			candidatoDAO.inserir(candidato);
-			response.sendRedirect("candidatoSucesso.jsp");
-		}catch(RuntimeException e) {
-			request.getSession().setAttribute("msgErro", "Candidato já cadastro com esse número");
-			response.sendRedirect("erro.jsp");
-		}
+		request.getSession().invalidate();
+		response.sendRedirect("index.jsp");
 	}
 
 }

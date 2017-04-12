@@ -2,6 +2,7 @@ package br.estacio.eleicoesweb.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -55,5 +56,28 @@ public class CUsuarioDAOImpl implements CUsuarioDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public CUsuario obterPorLoginESenha(String login, String senha) {
+		String sql = "SELECT * FROM USUARIOS WHERE email = ? AND senha = ?";
 
+		try (Connection connection = CConnectionFactory.getConnection();
+				PreparedStatement ps = connection.prepareStatement(sql);) {
+
+			ps.setString(1, login);
+			ps.setString(2, senha);
+
+			CUsuario usuario = null;
+			try (ResultSet rs = ps.executeQuery()) {
+				if (rs.next()) {
+					usuario = new CUsuario();
+					usuario.setCemail(rs.getString("email"));
+					usuario.setCsenha(rs.getString("senha"));
+				}
+			}
+
+			return usuario;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} 
+	}
 }
