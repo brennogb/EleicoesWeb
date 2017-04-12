@@ -2,8 +2,6 @@ var Numpad = function () {};
 
 Numpad.prototype.putNumber = function (event) {
 	event.preventDefault();
-	console.log(event);
-	console.log(this);
 	var btn = $(event.target);
 	var num = btn.text();
 	var inputVoto = $('#numero-voto');
@@ -13,6 +11,15 @@ Numpad.prototype.putNumber = function (event) {
 	if (numVoto.length < MAX_LENGTH) {
 		inputVoto.val(numVoto + num);
 	}
+};
+
+Numpad.prototype.backspace = function (event) {
+	event.preventDefault();
+	var btn = $(event.target);
+	var inputVoto = $('#numero-voto');
+	var inputVal = inputVoto.val();
+
+	inputVoto.val(inputVal.substring(0, inputVal.length -1));
 };
 
 var Eleicao = function () {
@@ -55,10 +62,12 @@ $(document).ready(function() {
 		eleicao = new Eleicao();
 	
 	 $('[data-toggle="tooltip"]').tooltip();
+
+	$('.numpad').find('.num').on('click', numpad.putNumber);
+	$('.numpad').find('.backspace').on('click', numpad.backspace);
 	
-	$('.numpad').find('.btn-primary').on('click', numpad.putNumber);
-	
-	$('#numero-voto').on('keyup', eleicao.verificarNumeroDoCandidato);
+	//$('#numero-voto').on('keyup', eleicao.verificarNumeroDoCandidato);
+	$('#numero-voto').mask('00000');
 	
 	$()
 });

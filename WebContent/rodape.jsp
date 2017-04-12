@@ -10,4 +10,5 @@
 <script src="resources/js/jquery-3.2.0.min.js"></script>
 <script src="resources/js/tether.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/jquery.mask.min.js"></script>
 <script src="resources/js/script.js"></script>

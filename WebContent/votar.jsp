@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
     	<meta charset="utf-8"/>
@@ -63,35 +63,35 @@
 						<div class="numpad">
 							<div class="row">
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">1</button>
+									<button class="btn btn-primary btn-lg btn-block num">1</button>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">2</button>
+									<button class="btn btn-primary btn-lg btn-block num">2</button>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">3</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">4</button>
-								</div>
-								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">5</button>
-								</div>
-								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">6</button>
+									<button class="btn btn-primary btn-lg btn-block num">3</button>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">7</button>
+									<button class="btn btn-primary btn-lg btn-block num">4</button>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">8</button>
+									<button class="btn btn-primary btn-lg btn-block num">5</button>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">9</button>
+									<button class="btn btn-primary btn-lg btn-block num">6</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block num">7</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block num">8</button>
+								</div>
+								<div class="col">
+									<button class="btn btn-primary btn-lg btn-block num">9</button>
 								</div>
 							</div>
 							<div class="row">
@@ -99,17 +99,17 @@
 									<input type="submit" value="Votar" class="btn btn-success btn-lg btn-block"/>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block">0</button>
+									<button class="btn btn-primary btn-lg btn-block num">0</button>
 								</div>
 								<div class="col">
-									<button class="btn btn-primary btn-lg btn-block" aria-label="backspace" data-toggle="tooltip" title="backspace (apaga para trás)">
+									<button class="btn btn-primary btn-lg btn-block backspace" aria-label="backspace" data-toggle="tooltip" title="backspace (apaga para trás)">
 										<img src="resources/img/backspace-arrow_icon.png" alt="">
 									</button>
 								</div>
 							</div>
 						</div>
 					</form>
-				
+				</div>
 			</div>
 		</div>
 
