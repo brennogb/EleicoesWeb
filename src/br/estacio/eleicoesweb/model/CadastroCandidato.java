@@ -45,7 +45,7 @@ public class CadastroCandidato extends HttpServlet {
 			candidatoDAO.inserir(candidato);
 			response.sendRedirect("candidatoSucesso.jsp");
 		}catch(RuntimeException e) {
-			request.getSession().setAttribute("msgErro", "Candidato jÃ¡ cadastro com esse nÃºmero");
+			request.getSession().setAttribute("msgErro", "Candidato já cadastro com esse número");
 			response.sendRedirect("erro.jsp");
 		}
 	}

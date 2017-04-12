@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <header>
-
-	<nav class="navbar navbar-inverse bg-inverse">		
+	<nav class="navbar navbar-inverse bg-inverse mb-5">		
 		<div class="container">
 			<ul class="nav nav-justified">
 	  			<li class="nav-item">
@@ -37,7 +36,7 @@
     </nav>
 </header>
 
-	<div class="modal fade" id="logarModal" tabindex="-1" role="dialog" aria-labelledby="logarModalLabel" aria-hidden="true">
+<div class="modal fade" id="logarModal" tabindex="-1" role="dialog" aria-labelledby="logarModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
