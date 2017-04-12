@@ -58,7 +58,7 @@ public class CandidatoDAOImpl implements CandidatoDAO {
 	
 	@Override
 	public Candidato obterPorNumeroCandidato(String numero) {
-		Candidato candidato = new Candidato();
+		Candidato candidato = null;
 		String sql = "SELECT * FROM CANDIDATOS WHERE numero=?";
 		Connection connection = CConnectionFactory.getConnection();
 		try {
@@ -68,6 +68,7 @@ public class CandidatoDAOImpl implements CandidatoDAO {
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
+				candidato = new Candidato();
 				candidato.setNome(rs.getString("nome"));
 				candidato.setNumero(rs.getString("numero"));
 				candidato.setVotos(rs.getInt("total_votos"));
