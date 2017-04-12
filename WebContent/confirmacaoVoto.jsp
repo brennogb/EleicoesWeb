@@ -41,7 +41,7 @@
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 	
 		<h1 class="text-center">Confirme o seu candidato</h1>
-
+		<hr class="mb-5"/>
 		<form method="post" action="FinalizarVotacao">
 			<div class="form-group">
 				<div class="container">

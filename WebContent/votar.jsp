@@ -39,7 +39,7 @@
 
 		<div class="container mt-3">
 			<h1 class="text-center">Votação</h1>
-			<hr/>
+			<hr class="mb-5"/>
 			
 			<div class="row mt-5 justify-content-center">
 				<div class="col-lg-6  card pt-3 pb-3">
@@ -112,7 +112,6 @@
 				</div>
 			</div>
 		</div>
-
 	<jsp:include page="rodape.jsp" flush="true"/>
 		
 	</body>
