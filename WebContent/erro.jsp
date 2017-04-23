@@ -38,7 +38,7 @@
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 			<section>
 				<div class="container">
-					<div class="alert alert-danger" role="alert">
+					<div class="alert alert-danger text-center" role="alert">
         				<h1><%= request.getSession().getAttribute("msgErro") %></h1>
         			</div>
       			</div>

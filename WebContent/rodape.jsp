@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<footer class="credits">
-	<div class="mt-5 text-center">
+<footer class="credits pt-5 pb-5">
+	<div class="text-center">
 	  <p>Trabalho de Sistemas Web feito por <strong><a href="https://github.com/brennogb/" target="_blank">Brenno Gomes</a></strong> no <i>back-end</i> e <strong><a href="https://github.com/rivajunior" target="_blank">Rivaldo Junior</a></strong> no <i>front-end</i>.</p>
 	  <p>Centro Universitário Estácio do Ceará - Sistemas de Informação 2017.1, turma de 2014.2</p>
    </div>
