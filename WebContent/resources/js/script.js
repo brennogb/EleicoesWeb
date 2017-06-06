@@ -62,3 +62,29 @@ $(document).ready(function() {
 	
 	$()
 });
+
+function validaFormLogin() {
+    var login = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+   
+    var contemLetraMinuscula = new RegExp(/[a-z]{1,}/).test(senha);
+    var contemLetraMaiuscula = new RegExp(/[A-Z]{1,}/).test(senha);
+    var contemDigito = new RegExp(/[0-9]{1,}/).test(senha);
+    var contemOitoCaracteres = senha.length >= 8;
+    
+    var mensagemErro = document.getElementById("mensagemErro");
+    
+    if (!login) {
+        mensagemErro.innerHTML = "Favor preencher o campo login.";
+        alert("Teste");
+        return false;
+    } else if (!senha) {
+        mensagemErro.innerHTML = "Favor preencher o campo senha.";
+        return false;
+    } else if (!(contemOitoCaracteres && contemLetraMaiuscula && contemLetraMinuscula && contemDigito)) {
+        mensagemErro.innerHTML = "A senha deve ter no mínimo 8 caracteres, com pelo menos 1 letra maiúscula, 1 letra minúscula e 1 digito.";
+        return false;
+    } else {
+        return true;
+    }
+}

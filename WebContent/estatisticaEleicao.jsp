@@ -1,7 +1,15 @@
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.util.List"%>
+<%@page import="br.estacio.eleicoesweb.entidades.Candidato"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
+
+	<% List<Candidato> candidatos = (List<Candidato>) session.getAttribute("listaCandidatos"); 
+		Integer totalVotosEleicao = (Integer) session.getAttribute("totalEleicao");
+	%>
+
 	<head>
     	<meta charset="utf-8"/>
     	<meta name="description" content="Trabalho de Sistemas Webs para eleições genéricas. Onde podem ser cadastrados candidatos à eleição, eleitores e sempre que necessário, acompanhar o andamento dos votos.">
@@ -9,7 +17,7 @@
     	<meta name="author" content="Brenno Gomes e Riva Junior">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	
-		<title>Sistema de Gerenciamento de Eleições</title>
+		<title>Estatísticas da Eleição</title>
 		
 		<!-- Favcons para navegadores desktop -->
 		<link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
@@ -33,25 +41,39 @@
     	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
     	<link href="resources/css/style.css" rel="stylesheet">
 	</head>
-	
 	<body>
-  	<jsp:include page="cabecalho.jsp" flush="true"/>
-  	
-	 <section>
-    	<div class="container">
-	 		<img src="resources/img/SIGE-logo-art.png" alt="Logo SIGE em formato artistico com letras cizas e fundo branco">
-	 		<h1 class="display-3 text-center" style="color: #b3b3b3;">Sistema de Gerenciamento de Eleições</h1>
-	 		<div class="jumbotron mt-3">
-	 			<h2 class="">Seja Bem-vindo!</h2>
-	       		<p class="lead">Aqui você poderá acompanhar todas as informações sobre as eleições e inclusive votar!</p>
-	       		<hr class="my-4">
-	       		<a class="btn btn-outline-primary btn-lg" href="votar.jsp">Votar</a>
-	       		<a class="btn btn-outline-primary btn-lg" href="cadastroCandidato.jsp">Cadastrar candidato</a>
-	       		<a class="btn btn-outline-primary btn-lg" href="estatisticaEleicao.jsp">Estatisticas da Eleição</a>
-	     	</div>
-    	</div>
-	 </section>
-	 
-	 <jsp:include page="rodape.jsp" flush="true"/>
-  </body>
+		<jsp:include page="cabecalho.jsp" flush="true"/>
+	
+		<h1 class="text-center">Estatísticas da Eleição</h1>
+		
+		<table class="table">
+  			<thead>
+    			<tr>
+      				<th>#</th>
+      				<th>Candidato</th>
+      				<th>Total de votos</th>
+      				<th>Percentual</th>
+    			</tr>
+ 	 		</thead>
+  			<tbody>
+    			<% for (Candidato candidato : candidatos) { %>
+    				<tr>
+    					<td></td>
+      					<td><%= candidato.getNome() %></td>
+      					<td><%= candidato.getVotos() %></td>
+      					<% 
+      						DecimalFormat df = new DecimalFormat("#.00");
+      						float percent = (((float)candidato.getVotos() / totalVotosEleicao) * 100);
+      						String percentualVoto = df.format(percent) + "%";
+      					%>
+      					<td><%= percentualVoto %></td>
+    				</tr>
+    			<% } %>
+  			</tbody>
+		</table>
+		Total de votos da eleição: <%= totalVotosEleicao %>
+
+		<jsp:include page="rodape.jsp" flush="true"/>
+		
+	</body>
 </html>

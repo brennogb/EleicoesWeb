@@ -1,6 +1,7 @@
 package br.estacio.eleicoesweb.filter;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
@@ -14,7 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.estacio.eleicoesweb.dao.CandidatoDAO;
+import br.estacio.eleicoesweb.dao.impl.CandidatoDAOImpl;
 import br.estacio.eleicoesweb.entidades.CUsuario;
+import br.estacio.eleicoesweb.entidades.Candidato;
 
 /**
  * Servlet Filter implementation class LoginFilter
@@ -24,7 +28,7 @@ import br.estacio.eleicoesweb.entidades.CUsuario;
 				DispatcherType.FORWARD, 
 				DispatcherType.INCLUDE
 		}
-					, urlPatterns = { "/cadastroCandidato.jsp" })
+					, urlPatterns = { "/cadastroCandidato.jsp", "/estatisticaEleicao.jsp" })
 public class LoginFilter implements Filter {
 	
 	private String contextPath;
@@ -55,6 +59,13 @@ public class LoginFilter implements Filter {
         	session.setAttribute("msgErro", "Usuário necessita estar logado para executar essa operação!");
         	res.sendRedirect(contextPath + "/erro.jsp");
         } else {
+        	if (req.getRequestURI().equals(contextPath + "/estatisticaEleicao.jsp")) {
+        		CandidatoDAO candidatoDAO = new CandidatoDAOImpl();
+        		List<Candidato> candidatos = candidatoDAO.listar();
+        		Integer totalEleicao = candidatoDAO.obterTotalVotosEleicao();
+        		session.setAttribute("listaCandidatos", candidatos);
+        		session.setAttribute("totalEleicao", totalEleicao);
+        	}
         	chain.doFilter(request, response);
         }
 	}

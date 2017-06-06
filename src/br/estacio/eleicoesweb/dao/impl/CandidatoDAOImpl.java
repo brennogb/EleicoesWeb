@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.estacio.eleicoesweb.dao.CConnectionFactory;
@@ -46,8 +47,32 @@ public class CandidatoDAOImpl implements CandidatoDAO {
 
 	@Override
 	public List<Candidato> listar() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from CANDIDATOS order by total_votos desc";
+		List<Candidato> candidatos = new ArrayList<>();
+		Candidato candidato = null;
+		Connection connection = CConnectionFactory.getConnection();
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				candidato = new Candidato();
+				candidato.setNome(rs.getString("nome"));
+				candidato.setNumero(rs.getString("numero"));
+				candidato.setVotos(rs.getInt("total_votos"));
+				candidatos.add(candidato);
+			}
+		} catch (NumberFormatException | SQLException e) {
+			return null;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		
+		return candidatos;
 	}
 
 	@Override
@@ -98,6 +123,30 @@ public class CandidatoDAOImpl implements CandidatoDAO {
 			
 			while(rs.next()) {
 				total = rs.getInt("total_votos");
+			}
+		} catch (NumberFormatException | SQLException e) {
+			return null;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		return total;
+	}
+	
+	public Integer obterTotalVotosEleicao() {
+		int total = 0;
+		String sql = "select sum(total_votos) as total_eleicao from CANDIDATOS";
+		Connection connection = CConnectionFactory.getConnection();
+		
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				total = rs.getInt("total_eleicao");
 			}
 		} catch (NumberFormatException | SQLException e) {
 			return null;
