@@ -49,6 +49,9 @@
           				<span aria-hidden="true">&times;</span>
         			</button>
       			</div>
+      		</div>
+      	</div>
+      </div>
 
 <div class="modal fade" id="logarModal" tabindex="-1" role="dialog" aria-labelledby="logarModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -70,6 +73,7 @@
     		</div>
   		</div>
 	</div>
+</div>
 
 
 

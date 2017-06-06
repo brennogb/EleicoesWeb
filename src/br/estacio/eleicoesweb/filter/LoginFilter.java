@@ -56,7 +56,7 @@ public class LoginFilter implements Filter {
         CUsuario usuarioLogado = (CUsuario) session.getAttribute("usuarioLogado");
         
         if(usuarioLogado == null) {
-        	session.setAttribute("msgErro", "Usu·rio necessita estar logado para executar essa operaÁ„o!");
+        	session.setAttribute("msgErro", "Usu√°rio necessita estar logado para executar essa opera√ß√£o!");
         	res.sendRedirect(contextPath + "/erro.jsp");
         } else {
         	if (req.getRequestURI().equals(contextPath + "/estatisticaEleicao.jsp")) {
