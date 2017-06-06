@@ -39,14 +39,14 @@
 
 		<div class="container mt-3">
 			<h1 class="text-center">Cadastrar Candidato</h1>
-			<hr/>
-			<h2>Informe os dados do candidato</h2>
+			<hr class="mb-5"/>
+			<h2 class="text-center">Informe os dados do candidato</h2>
 			<div class="row mt-5 justify-content-center">
 				<div class="col-lg-6  card pt-3 pb-3">
 					<div class="row">
 						<div class="col">
 							<form>
-								<div class="card bg-gray">
+								<div class="card bg-gray mb-2">
 									<div class="candidato-card mt-4">
 										<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
 									</div>
@@ -58,13 +58,13 @@
 						</div>
 					</div>
 					<form method="post" action="CadastrarCandidato">
-						<div class="row">
+						<div class="row mb-3">
 							<div class="col">
 								<label for="nome">Nome do candidato</label> 
 								<input type="text" class="form-control" name="nome" placeholder="José da Silva" autofocus>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row mb-3">
 							<div class="col">
 								<label for="email">Número</label> 
 								<input type="number" class="form-control" name="numero" placeholder="00000" min="0" max="99999" pattern="[0-9]*" inputmode="numeric">

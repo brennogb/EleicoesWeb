@@ -46,7 +46,7 @@ public class VotoService extends HttpServlet {
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/confirmacaoVoto.jsp");
 			rd.forward(request, response);
 		} else {
-			request.getSession().setAttribute("msgErro", "Candidato n√£o encontrado!");
+			request.getSession().setAttribute("msgErro", "Candidato n„o encontrado!");
 			response.sendRedirect("erro.jsp");
 		}
 	}

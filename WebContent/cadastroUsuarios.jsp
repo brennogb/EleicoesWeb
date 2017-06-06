@@ -40,7 +40,7 @@
 		<div class="container mt-3">
 			<h1 class="text-center">Cadastrar Usuário</h1>
 			<hr/>
-			<h2>Informe os dados do usuário</h2>
+			<h2 class="text-center mb-5">Informe os dados do usuário</h2>
 			<div class="row mt-5 justify-content-center">
 				<div class="col-lg-6  card pt-3 pb-3">
 					<div class="row">

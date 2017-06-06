@@ -12,7 +12,7 @@
     	
 		<title>Erro Geral</title>
 		
-		<!-- Favcons para navegadores desktop -->
+		<!-- Favicons para navegadores desktop -->
 		<link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="resources/img/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" href="resources/img/favicon-48x48.png" sizes="48x48">
@@ -38,7 +38,9 @@
 		<jsp:include page="cabecalho.jsp" flush="true"/>
 			<section>
 				<div class="container">
-        			<h1 class="alert-error"><%= request.getSession().getAttribute("msgErro") %></h1>
+					<div class="alert alert-danger text-center" role="alert">
+        				<h1><%= request.getSession().getAttribute("msgErro") %></h1>
+        			</div>
       			</div>
 			</section>	
 		<jsp:include page="rodape.jsp" flush="true"/>

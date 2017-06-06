@@ -11,7 +11,7 @@
     	
 		<title>Sistema de Gerenciamento de Eleições</title>
 		
-		<!-- Favcons para navegadores desktop -->
+		<!-- Favicons para navegadores desktop -->
 		<link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="resources/img/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" href="resources/img/favicon-48x48.png" sizes="48x48">
@@ -39,8 +39,8 @@
   	
 	 <section>
     	<div class="container">
-	 		<img src="resources/img/SIGE-logo-art.png" alt="Logo SIGE em formato artistico com letras cizas e fundo branco">
-	 		<h1 class="display-3 text-center" style="color: #b3b3b3;">Sistema de Gerenciamento de Eleições</h1>
+	 		<img src="resources/img/SIGE-logo-arte-bandeira-Brasil.png" alt="Logo SIGE em formato artistico com cores que lembram a bandeira do Brasil">
+	 		<h1 class="text-center" style="color: #b3b3b3;">Sistema de Gerenciamento de Eleições</h1>
 	 		<div class="jumbotron mt-3">
 	 			<h2 class="">Seja Bem-vindo!</h2>
 	       		<p class="lead">Aqui você poderá acompanhar todas as informações sobre as eleições e inclusive votar!</p>
