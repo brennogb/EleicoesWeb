@@ -74,6 +74,30 @@ function enviaVotoAjax() {
     ajax.send(); 
 }
 
+function confirmaVotoAjax() {
+    criarXMLHttpRequest();
+    var divResposta = document.getElementById("nomeCandidato");
+    var nomeCandidato = divResposta.value;
+
+    ajax.open("GET", "/EleicoesWeb/ConfirmacaoVotoAJAX?nome=" + nomeCandidato);
+    
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {  
+            var respostaJSON = JSON.parse(ajax.responseText);
+
+            if (respostaJSON) {
+                var mensagem = respostaJSON.respostaServidor;
+                divResposta.innerHTML = mensagem;
+                alert(nome);
+            } else {
+                console.log("Requisição AJAX falhou: " + ajax.status + " " + ajax.statusText);
+            }
+        } 
+    }
+    
+    ajax.send(); 
+}
+
 function somenteNumero(e){
     var tecla=(window.event)?event.keyCode:e.which;
     document.getElementById("mensagemErro").innerHTML = "Válido somente número com 2 digitos";

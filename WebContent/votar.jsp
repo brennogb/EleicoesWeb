@@ -48,7 +48,7 @@
 							<div class="text-center" id="nomeCandidato">
 							</div>
 							<br>
-							<input type="submit" value="Confirmar" class="btn btn-success btn-lg btn-block"/>
+							<input type="submit" onclick="confirmaVotoAjax();" value="Confirmar" class="btn btn-success btn-lg btn-block"/>
 						</div>
 					</div>
 					

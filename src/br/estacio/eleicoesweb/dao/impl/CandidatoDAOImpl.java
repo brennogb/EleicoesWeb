@@ -180,4 +180,33 @@ public class CandidatoDAOImpl implements CandidatoDAO {
 		}
 	}
 
+	@Override
+	public Candidato obterPorNome(String nome) {
+		Candidato candidato = null;
+		String sql = "SELECT * FROM CANDIDATOS WHERE nome=?";
+		Connection connection = CConnectionFactory.getConnection();
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setString(1, nome);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				candidato = new Candidato();
+				candidato.setNome(rs.getString("nome"));
+				candidato.setNumero(rs.getString("numero"));
+				candidato.setVotos(rs.getInt("total_votos"));
+			}
+		} catch (SQLException e) {
+			return null;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		
+		return candidato;
+	}
+
 }
