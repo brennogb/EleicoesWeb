@@ -62,13 +62,18 @@ function enviaVotoAjax() {
             var respostaJSON = JSON.parse(ajax.responseText);
 
             if (respostaJSON) {
-                var nome = respostaJSON.respostaServidor;
-                divResposta.innerHTML = nome;
-                alert(nome);
+                var nome = respostaJSON.respostaServidor,
+                	btnConfirma = $('<input type="submit" onclick="confirmaVotoAjax();" value="Confirmar" class="btn btn-success btn-lg btn-block"/>');
+                
+                divResposta.innerText = nome;
+                $(divResposta).after(btnConfirma);
+                
             } else {
                 console.log("Requisição AJAX falhou: " + ajax.status + " " + ajax.statusText);
             }
-        } 
+        } else {
+        	console.log("Requisição AJAX falhou: " + ajax.status + " " + ajax.statusText);
+        }
     }
     
     ajax.send(); 
@@ -87,6 +92,7 @@ function confirmaVotoAjax() {
 
             if (respostaJSON) {
                 var mensagem = respostaJSON.respostaServidor;
+                
                 divResposta.innerHTML = mensagem;
                 alert(nome);
             } else {

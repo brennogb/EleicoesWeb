@@ -48,7 +48,7 @@
 							<div class="text-center" id="nomeCandidato">
 							</div>
 							<br>
-							<input type="submit" onclick="confirmaVotoAjax();" value="Confirmar" class="btn btn-success btn-lg btn-block"/>
+							
 						</div>
 					</div>
 					
@@ -56,7 +56,7 @@
 						<div class="form-group mt-2 mb-2">
 							<label for="nome">Número</label>
 							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00"
-								max="99" min="0" maxlength="2" size="2" onkeydown="return somenteNumero(event)">
+								max="99" min="0" onkeydown="return somenteNumero(event)">
 							<small>Informe o número do seu candidato</small>
 							<div class="text-center">
         						<span class="label-danger" id="mensagemErro"></span>
