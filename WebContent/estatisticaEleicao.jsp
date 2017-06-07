@@ -56,9 +56,10 @@
     			</tr>
  	 		</thead>
   			<tbody>
-    			<% for (Candidato candidato : candidatos) { %>
+    			<% int counter = 1; 
+    				for (Candidato candidato : candidatos) { %>
     				<tr>
-    					<td></td>
+    					<td><%= counter %></td>
       					<td><%= candidato.getNome() %></td>
       					<td><%= candidato.getVotos() %></td>
       					<% 
@@ -68,10 +69,13 @@
       					%>
       					<td><%= percentualVoto %></td>
     				</tr>
-    			<% } %>
+    			<% counter++; 
+    				} %>
   			</tbody>
 		</table>
 		Total de votos da eleição: <%= totalVotosEleicao %>
+		<br>
+		Vencedor da eleição até o momento: <%= candidatos.get(0).getNome() %>
 
 		<jsp:include page="rodape.jsp" flush="true"/>
 		

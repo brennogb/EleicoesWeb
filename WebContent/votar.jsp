@@ -36,7 +36,7 @@
 	
 	<body>
 		<jsp:include page="cabecalho.jsp" flush="true"/>
-
+		
 		<div class="container mt-3">
 			<h1 class="text-center">Votação</h1>
 			<hr class="mb-5"/>
@@ -45,19 +45,22 @@
 				<div class="col-lg-6  card pt-3 pb-3">
 					<div class="row">
 						<div class="col">
-							<div class="card bg-gray">
-								<div class="candidato-card mt-4">
-									<img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid rounded-circle" alt="Miniatura genérica">
-								</div>
+							<div class="text-center" id="nomeCandidato">
 							</div>
+							<br>
+							<input type="submit" value="Confirmar" class="btn btn-success btn-lg btn-block"/>
 						</div>
 					</div>
-					<form method="post" action="Votar">
+					
+					<form method="post" >
 						<div class="form-group mt-2 mb-2">
 							<label for="nome">Número</label>
-							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00000"
-								max="99999" min="0">
+							<input type="text" class="form-control" name="numeroVoto" id="numero-voto" placeholder="00"
+								max="99" min="0" maxlength="2" size="2" onkeydown="return somenteNumero(event)">
 							<small>Informe o número do seu candidato</small>
+							<div class="text-center">
+        						<span class="label-danger" id="mensagemErro"></span>
+        					</div>
 						</div>
 					
 						<div class="numpad">
@@ -96,7 +99,7 @@
 							</div>
 							<div class="row">
 								<div class="col">
-									<input type="submit" value="Votar" class="btn btn-success btn-lg btn-block"/>
+									<input onclick="enviaVotoAjax();" type="submit" value="Votar" class="btn btn-success btn-lg btn-block"/>
 								</div>
 								<div class="col">
 									<button class="btn btn-primary btn-lg btn-block num">0</button>

@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getSession().setAttribute("msgErro", "Essa operaÁ„o n„o È permitida");
+		request.getSession().setAttribute("msgErro", "Essa opera√ß√£o n√£o √© permitida");
     	response.sendRedirect("erro.jsp");
 	}
 
@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
 			request.getSession().setAttribute("usuarioLogado", usuarioLogado);
 			response.sendRedirect("index.jsp");
 		} else {
-			request.getSession().setAttribute("msgErro", "E-mail e/ou senha inv·lidos");
+			request.getSession().setAttribute("msgErro", "E-mail e/ou senha inv√°lidos");
 			response.sendRedirect("erro.jsp");
 		}
 	}
