@@ -99,7 +99,7 @@
 							</div>
 							<div class="row">
 								<div class="col">
-									<input onclick="enviaVotoAjax();" type="submit" value="Votar" class="btn btn-success btn-lg btn-block"/>
+									<input onclick="enviaVotoAjax(event);" type="button" value="Votar" class="btn btn-success btn-lg btn-block"/>
 								</div>
 								<div class="col">
 									<button class="btn btn-primary btn-lg btn-block num">0</button>

@@ -50,6 +50,7 @@ function criarXMLHttpRequest() {
 };
 
 function enviaVotoAjax() {
+	event.preventDefault();
     criarXMLHttpRequest();
 
     var numero = document.getElementById("numero-voto").value;
@@ -63,7 +64,7 @@ function enviaVotoAjax() {
 
             if (respostaJSON) {
                 var nome = respostaJSON.respostaServidor,
-                	btnConfirma = $('<input type="submit" onclick="confirmaVotoAjax();" value="Confirmar" class="btn btn-success btn-lg btn-block"/>');
+                	btnConfirma = $('<div id="divBtConfirmar"><input type="button" onclick="confirmaVotoAjax(event);" value="Confirmar" class="btn btn-success btn-lg btn-block"/></div>');
                 
                 divResposta.innerText = nome;
                 $(divResposta).after(btnConfirma);
@@ -81,8 +82,9 @@ function enviaVotoAjax() {
 
 function confirmaVotoAjax() {
     criarXMLHttpRequest();
+    event.preventDefault();
     var divResposta = document.getElementById("nomeCandidato");
-    var nomeCandidato = divResposta.value;
+    var nomeCandidato = divResposta.innerHTML;
 
     ajax.open("GET", "/EleicoesWeb/ConfirmacaoVotoAJAX?nome=" + nomeCandidato);
     
@@ -92,9 +94,12 @@ function confirmaVotoAjax() {
 
             if (respostaJSON) {
                 var mensagem = respostaJSON.respostaServidor;
-                
                 divResposta.innerHTML = mensagem;
-                alert(nome);
+                var divConfirmar = document.getElementById("divBtConfirmar").style.display;
+                if(divConfirmar == "none")
+                	document.getElementById("divBtConfirmar").style.display = 'block';
+                else
+                	document.getElementById("divBtConfirmar").style.display = 'none';
             } else {
                 console.log("Requisição AJAX falhou: " + ajax.status + " " + ajax.statusText);
             }
